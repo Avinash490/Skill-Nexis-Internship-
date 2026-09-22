@@ -1,0 +1,16 @@
+{
+  "name": "Sales Analytics Professional",
+  "dataColors": [
+    "#17365D",
+    "#4E79A7",
+    "#E15759",
+    "#59A14F",
+    "#F28E2B",
+    "#B07AA1",
+    "#76B7B2",
+    "#EDC948"
+  ],
+  "background": "#F4F6F9",
+  "foreground": "#172033",
+  "tableAccent": "#17365D"
+}

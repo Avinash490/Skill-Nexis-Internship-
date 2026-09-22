@@ -1,0 +1,29 @@
+-- Create these measures after importing the Cleaned_Data table.
+
+Total Sales = SUM(Cleaned_Data[Sales])
+
+Total Profit = SUM(Cleaned_Data[Profit])
+
+Units Sold = SUM(Cleaned_Data[Units Sold])
+
+Profit Margin % = DIVIDE([Total Profit], [Total Sales], 0)
+
+Average Sale Price = AVERAGE(Cleaned_Data[Sale Price])
+
+Orders = COUNTROWS(Cleaned_Data)
+
+Countries = DISTINCTCOUNT(Cleaned_Data[Country])
+
+Products = DISTINCTCOUNT(Cleaned_Data[Product])
+
+Sales LY =
+CALCULATE([Total Sales], SAMEPERIODLASTYEAR(Cleaned_Data[Date]))
+
+Sales YoY % =
+DIVIDE([Total Sales] - [Sales LY], [Sales LY], 0)
+
+Profit LY =
+CALCULATE([Total Profit], SAMEPERIODLASTYEAR(Cleaned_Data[Date]))
+
+Profit YoY % =
+DIVIDE([Total Profit] - [Profit LY], [Profit LY], 0)
